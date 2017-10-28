@@ -1,0 +1,6 @@
+CREATE TABLE subscribes
+  (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, 
+    user_id INT UNSIGNED NOT NULL,
+    group_id INT UNSIGNED NOT NULL
+  );
