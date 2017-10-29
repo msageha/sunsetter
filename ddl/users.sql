@@ -1,7 +1,7 @@
 CREATE TABLE users (
   id int unsigned primary key auto_increment,
   introduction varchar(500),
-  image_id int,
+  image_id int unsigned,
   screen_name varchar(20) NOT NULL,
   user_name varchar(20) NOT NULL,
   password_hash varchar(256) NOT NULL,
