@@ -1,0 +1,17 @@
+# sunrise
+192.168.0.121 fono09-1-local
+133.242.52.119 fono09-1-global
+192.168.0.221 fono09-2-local
+133.242.17.200 fono09-2-global
+153.120.92.225 mizuki08-1-global
+192.168.0.118 mizuki08-1-local
+153.120.92.13 mizuki08-2-global
+192.168.0.218 mizuki08-2-local
+153.120.25.165 hoshi05-1-global
+192.168.0.125 hoshi05-1-local
+153.120.83.5 hoshi05-2-global
+192.168.0.225 hoshi05-2-global
+133.242.53.212 joe03-1-global
+192.168.0.123 joe03-1-local
+133.242.22.24 joe03-2-global
+192.168.0.223 joe03-2-local
