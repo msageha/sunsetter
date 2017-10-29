@@ -1,22 +1,29 @@
-## 設計
+#見出し
+[設計](#section1)
+[トラフィック分析](#section2)
+[memcache](#section3)
+[SQL Queries](#section4)
+[テーブル詳細](#section5)
+
+# <a name="section1">　設計
 命名規則：テーブル名はsnake case＆複数形
 
-### User.Image
+## User.Image
 * 復旧を早くするため外部へ
 * password_hahは使用可否に関わるためSLA直結
 * バックアップを常時取りたい
 * あくまで見た目，非同期で取ってくることもできる
 * 長めのcacheが聞く
 
-### PostImage/PrivateImageの分離
+## PostImage/PrivateImageの分離
 * 基本的に別エンティティ
 * Private側は，セキュリティ上，暗号化する可能性あり．
 
-### データベースを直近１週間のものと，それ以前ので分けるか
+## データベースを直近１週間のものと，それ以前ので分けるか
 PostのSharding→APでやる（できるものとして）
 
-## トラフィック分析
-### 投稿数
+# <a name="section2">　トラフィック分析
+## 投稿数
 * Average 15,000,000 Post/day
 * Average 173 Post/sec
 * Average 3,000,000 Image/day
@@ -26,13 +33,13 @@ DAU数 300000人
 ユーザの一日当たりのアクセス数 480[回]
 DAU全体の一日あたりの総アクセス数 300000 * 480 = 144000000[回]
 
-# memcache
+# <a name="section3"> memcache
 
 | key | value |
 |-----|-------|
 | users.id | screen_name |
 
-# SQL Queries
+# <a name="section4"> SQL Queries
 
 ## ログイン画面
 
@@ -497,6 +504,7 @@ mysql> explain SELECT user_name FROM users WHERE id = 753070;
 1 row in set (0.00 sec)
 ```
 
+# <a name="section5"> database テーブル詳細
 ```
 mysql> SHOW TABLE STATUS FROM sunsetter\G
 *************************** 1. row ***************************
